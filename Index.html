@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>奶茶的驚喜</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: white;
+      font-family: "Microsoft JhengHei", sans-serif;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    #title {
+      font-size: 3rem;
+      opacity: 0;
+      margin-top: 30vh;
+      animation: fadeInText 2s ease-in forwards, shatterOut 2s ease-out 3s forwards;
+    }
+
+    @keyframes fadeInText {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes shatterOut {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+        filter: none;
+      }
+      100% {
+        transform: scale(1.5) rotate(10deg);
+        opacity: 0;
+        filter: blur(8px);
+      }
+    }
+
+    #photo {
+      width: 80%;
+      max-width: 400px;
+      margin-top: 30px;
+      opacity: 0;
+      transition: opacity 2s ease-in;
+    }
+
+    #message {
+      margin: 40px 20px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      opacity: 0;
+      transition: opacity 2s ease-in;
+    }
+  </style>
+</head>
+<body>
+  <div id="title">奶茶</div>
+  <img id="photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aH..." alt="奶茶照片" />
+  <div id="message">
+    嗨～這封訊息✉️ 留給可愛的小捧油。<br><br>
+    這樣子希望有驚喜到妳～哈哈哈，畢竟我不是很會製造驚喜，甚至是表達真實情緒，體諒一下老人家的不浪漫。<br><br>
+    這3天（6/20-22星期五～星期日）<br>
+    雖然我不在妳身邊陪著妳<br>
+    但我相信小捧油是很棒的，可以照顧好自己，等我回來。<br><br>
+    不知道可以送什麼給妳，畢竟還沒有身分可以贈與<br>
+    ，只能通融妳告訴我你有沒有什麼想要的宜蘭名產<br>
+    我帶回來給妳～～
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("photo").style.opacity = "1";
+    }, 5500);
+
+    setTimeout(() => {
+      document.getElementById("message").style.opacity = "1";
+    }, 8000);
+  </script>
+</body>
+</html>
